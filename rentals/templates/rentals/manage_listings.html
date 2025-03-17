@@ -1,0 +1,35 @@
+{% extends 'rentals/base.html' %}
+{% block content %}
+<div class="container">
+    <h2 class="text-center my-4">📋 My Listings</h2>
+
+    <!-- Add New Listing Button -->
+    <a href="{% url 'add_rental' %}" class="btn btn-success mb-3">➕ Add New Listing</a>
+
+    <!-- Back to Homepage Button -->
+    <a href="{% url 'homepage' %}" class="btn btn-secondary mb-3">⬅ Back to Homepage</a>
+
+    <div class="row">
+        {% for listing in listings %}
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{ listing.name }}</h5>
+                    <p class="card-text"><strong>Category:</strong> {{ listing.get_category_display }}</p>
+                    <p class="card-text"><strong>Price per day:</strong> ₹{{ listing.price_per_day }}</p>
+                    <p class="card-text">{{ listing.description|truncatechars:100 }}</p>
+                    
+                    <!-- Edit & Delete Buttons -->
+                    <a href="{% url 'edit_listing' listing.id %}" class="btn btn-primary btn-sm">✏️ Edit</a>
+                    <a href="{% url 'delete_listing' listing.id %}" class="btn btn-danger btn-sm">🗑️ Delete</a>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <div class="col-12">
+            <p class="text-muted">You have no listings yet. <a href="{% url 'add_rental' %}">Add one now!</a></p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

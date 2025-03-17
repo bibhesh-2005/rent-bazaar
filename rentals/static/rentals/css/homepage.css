@@ -1,0 +1,143 @@
+/* rentals/static/rentals/css/homepage.css */
+
+/* General Page Styling */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(to right, #007bff, #00c6ff);
+    color: white;
+    border-radius: 0 0 30px 30px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hero-section h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* Card Styling */
+.card {
+    max-width: 600px;
+    margin: auto;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+    background: white;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+/* Buttons */
+.btn-custom {
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+}
+
+/* Manage Listings & My Profile */
+.btn-listings, .btn-profile {
+    background-color: #ffc107;
+    color: black;
+    font-weight: bold;
+    border-radius: 8px;
+    text-transform: uppercase;
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    border: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-listings:hover, .btn-profile:hover {
+    background-color: #e0a800;
+    transform: scale(1.05);
+}
+
+/* Browse & Add Buttons */
+.btn-browse {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-browse:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.btn-add {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-add:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* Auth Buttons */
+.btn-auth {
+    width: 150px;
+    font-size: 16px;
+    margin: 5px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border: none;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border: none;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section p {
+        font-size: 1rem;
+    }
+
+    .btn-custom {
+        font-size: 16px;
+    }
+}

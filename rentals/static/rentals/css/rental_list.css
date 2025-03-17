@@ -1,0 +1,88 @@
+/* rentals/static/rentals/css/rental_list.css */
+
+/* General Styling */
+body {
+    background: #f3f4f6;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Container */
+.container {
+    padding-top: 50px;
+}
+
+/* Cards */
+.card {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    text-align: center;
+}
+
+/* Buttons */
+.btn-custom {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    color: white;
+}
+
+.btn-browse {
+    background: #007bff;
+}
+
+.btn-browse:hover {
+    background: #0056b3;
+    transform: scale(1.1);
+}
+
+.btn-mylist {
+    background: #28a745;
+}
+
+.btn-mylist:hover {
+    background: #218838;
+    transform: scale(1.1);
+}
+
+.btn-back {
+    background: #6c757d;
+}
+
+.btn-back:hover {
+    background: #5a6268;
+    transform: scale(1.1);
+}
+
+/* Headings */
+h2 {
+    font-weight: bold;
+    color: #222;
+}
+
+/* Toggle Buttons */
+.toggle-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
