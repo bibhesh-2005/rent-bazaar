@@ -13,6 +13,14 @@ class RentalItem(models.Model):
         ('appliances', 'Appliances'),
         ('others', 'Others'),
     ]
+    COLLEGE_CHOICES = [
+        ('OUTR', 'OUTR'),
+        ('Silicon', 'Silicon'),
+        ('ITER', 'ITER'),
+        ('IIIT BBSR', 'IIIT BBSR'),
+        ('IIT BBSR', 'IIT BBSR'),
+    ]
+
     
     name = models.CharField(max_length=255)
     description = models.TextField()
@@ -21,9 +29,27 @@ class RentalItem(models.Model):
     available = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
+    college = models.CharField(max_length=50, choices=COLLEGE_CHOICES, default='OUTR')  # Added college field
 
-    image = models.ImageField(upload_to='media/rental_images/', blank=True, null=True, default='default_no_image.png')
+    image = models.ImageField(upload_to='rental_images/', blank=True, null=True, default='default_no_image.png')
 
 
     def __str__(self):
         return self.name
+    
+
+class UserProfile(models.Model):
+    COLLEGE_CHOICES = [
+        ('OUTR', 'OUTR'),
+        ('Silicon', 'Silicon'),
+        ('ITER', 'ITER'),
+        ('IIIT BBSR', 'IIIT BBSR'),
+        ('IIT BBSR', 'IIT BBSR'),
+    ]
+
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    college = models.CharField(max_length=50, choices=COLLEGE_CHOICES, default='OUTR')
+    phone_number = models.CharField(max_length=15, blank=True, null=True)
+
+    def __str__(self):
+        return self.user.username

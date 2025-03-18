@@ -1,0 +1,49 @@
+/* rentals/static/rentals/css/profile.css */
+
+/* General Styling */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Profile Card */
+.profile-card {
+    max-width: 500px;
+    margin: auto;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+    background: white;
+    padding: 30px;
+    text-align: center;
+}
+
+/* Profile Details */
+.profile-details p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Buttons */
+.btn {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary:hover {
+    background-color: #333;
+}

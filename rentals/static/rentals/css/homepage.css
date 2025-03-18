@@ -1,5 +1,3 @@
-/* rentals/static/rentals/css/homepage.css */
-
 /* General Page Styling */
 body {
     background-color: #f8f9fa;
@@ -26,6 +24,54 @@ body {
     margin-top: 10px;
 }
 
+/* Search Form */
+.search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-form input {
+    width: 50%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+.search-form button {
+    padding: 12px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    transition: 0.3s;
+}
+
+.search-form button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Sorting & Filtering */
+.sort-filter-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.sort-filter-container select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    cursor: pointer;
+}
+
 /* Card Styling */
 .card {
     max-width: 600px;
@@ -39,6 +85,12 @@ body {
 
 .card:hover {
     transform: scale(1.02);
+}
+
+/* Card Image */
+.card img {
+    border-radius: 10px;
+    object-fit: cover;
 }
 
 /* Buttons */
@@ -55,8 +107,8 @@ body {
 
 /* Manage Listings & My Profile */
 .btn-listings, .btn-profile {
-    background-color: #ffc107;
-    color: black;
+    background-color: #ff9800;
+    color: white;
     font-weight: bold;
     border-radius: 8px;
     text-transform: uppercase;
@@ -68,7 +120,7 @@ body {
 }
 
 .btn-listings:hover, .btn-profile:hover {
-    background-color: #e0a800;
+    background-color: #e68900;
     transform: scale(1.05);
 }
 
@@ -84,12 +136,12 @@ body {
 }
 
 .btn-add {
-    background-color: #28a745;
+    background-color: #4caf50;
     color: white;
 }
 
 .btn-add:hover {
-    background-color: #218838;
+    background-color: #388e3c;
     transform: scale(1.05);
 }
 
@@ -98,6 +150,8 @@ body {
     width: 150px;
     font-size: 16px;
     margin: 5px;
+    border-radius: 8px;
+    font-weight: bold;
 }
 
 .btn-primary {
@@ -135,6 +189,24 @@ body {
 
     .hero-section p {
         font-size: 1rem;
+    }
+
+    .search-form {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .search-form input {
+        width: 100%;
+    }
+
+    .sort-filter-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sort-filter-container select {
+        width: 100%;
     }
 
     .btn-custom {

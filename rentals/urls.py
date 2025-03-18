@@ -1,7 +1,7 @@
 from django.urls import path
 from .views import (
     homepage, rental_list, add_rental, signup_view, login_view, logout_view,
-    manage_listings, edit_listing, delete_listing, user_profile
+    manage_listings, edit_listing, delete_listing, user_profile, edit_profile
 )
 
 urlpatterns = [
@@ -15,4 +15,5 @@ urlpatterns = [
     path('edit/<int:id>/', edit_listing, name='edit_listing'),
     path('delete/<int:id>/', delete_listing, name='delete_listing'),
     path('profile/', user_profile, name='user_profile'),  # 👈 New profile route
+    path('profile/edit/', edit_profile, name='edit_profile'),
 ]
